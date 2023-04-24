@@ -14,9 +14,9 @@ A Django app for creating and managing tree-structured menus with support for mu
 
 1. Clone the repository or download the project files
 2. Create a virtual environment for the project:
-'''
+```
 python -m venv venv
-'''
+```
 
 3. Activate the virtual environment:
 
@@ -34,9 +34,9 @@ python -m venv venv
 
 4. Install the requirements:
 
-'''
+```
 pip install -r requirements.txt
-'''
+```
 
 5. Run `python manage.py migrate` to apply the database migrations
 
