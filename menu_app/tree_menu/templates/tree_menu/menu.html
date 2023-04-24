@@ -1,0 +1,15 @@
+<ul>
+    {% for item in menu_items %}
+        <li{% if item.url_name == current_url %} class="active"{% endif %}>
+            <a href="{{ item.get_url }}">{{ item.title }}</a>
+            {% if item.get_children and item in expanded_items %}
+                <ul>
+                {% for child in item.get_children %}
+                    <li{% if child.url_name == current_url %} class="active"{% endif %}><a href="{{ child.url }}">{{ child.title }}</a></li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+    </ul>
+    
